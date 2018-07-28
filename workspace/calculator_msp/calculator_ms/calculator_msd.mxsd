@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="intA" type="xsd:int"/>
+  <xsd:element name="intB" type="xsd:int"/>
+  <xsd:element name="addC" type="xsd:int"/>
+  <xsd:element name="fcode" type="xsd:int"/>
+  <xsd:element name="fmessage" type="xsd:string"/>
+    <xsd:complexType name="ReqAdd">
+    <xsd:sequence>
+      <xsd:element ref="intA"/>
+      <xsd:element ref="intB"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    <xsd:complexType name="ResAdd">
+    <xsd:sequence>
+      <xsd:element ref="addC"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    <xsd:complexType name="ErrMessage">
+    <xsd:sequence>
+      <xsd:element ref="fcode"/>
+      <xsd:element ref="fmessage"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    <xsd:element name="ReqAdd" type="ReqAdd">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/ReqAdd;XSDElementDeclaration=5$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+    <xsd:element name="ResAdd" type="ResAdd">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/ResAdd;XSDElementDeclaration=6$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+    <xsd:element name="ErrMessage" type="ErrMessage">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/ErrMessage;XSDElementDeclaration=7$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

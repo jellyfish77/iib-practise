@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://integration/integration"
+	xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions"
+	xmlns:integrationintegration="http://integration/integration">
+	<!-- Message definition generated from /home/otto/IBM/IIBT10/workspace/MySQL_Integration_DB/integration.dbm -->
+
+	<!-- Complex type for integration.integration.genres -->
+	<xsd:import></xsd:import>
+	<xsd:complexType name="genresType">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="movie_id" nillable="true"
+				type="xsd:int" />
+			<xsd:element minOccurs="0" name="genre" nillable="true">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="1" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Global element for integration.integration.genres -->
+	<xsd:element ibmSchExtn:docRoot="true" name="genres"
+		type="integrationintegration:genresType" />
+
+	<!-- Complex type for integration.integration.movies -->
+	<xsd:complexType name="moviesType">
+		<xsd:sequence>
+			<xsd:element name="movie_id" type="xsd:int" />
+			<xsd:element minOccurs="0" name="title" nillable="true">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="1" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Global element for integration.integration.movies -->
+	<xsd:element ibmSchExtn:docRoot="true" name="movies"
+		type="integrationintegration:moviesType" />
+</xsd:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmMQInput.msgnode="ComIbmMQInput.msgnode" xmlns:ComIbmMQOutput.msgnode="ComIbmMQOutput.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="OQ_Test_MF_2.msgflow" nsPrefix="OQ_Test_MF_2.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="OQ_Test_MF_2" bundleName="OQ_Test_MF_2" pluginId="Otto-Test-Application"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Otto-Test-Application/icons/full/obj16/OQ_Test_MF_2.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Otto-Test-Application/icons/full/obj30/OQ_Test_MF_2.gif"/>
+    <shortDescription xmi:type="utility:ConstantString" string="Transport msg from 1 endpoint MQ to another"/>
+    <longDescription xmi:type="utility:ConstantString" string="Practise:&#xA;https://www.youtube.com/watch?v=adD8-HSE7Wo"/>
+    <composition>
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="122,366" queueName="OQ_MQ_Input_Queue">
+        <translation xmi:type="utility:ConstantString" string="OQ_MQ Input"/>
+      </nodes>
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="964,360" queueName="OQ_MQ_Output_Queue">
+        <translation xmi:type="utility:ConstantString" string="OQ_MQ Output"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer/>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>

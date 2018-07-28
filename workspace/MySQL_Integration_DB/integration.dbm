@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.8.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore" xmlns:SQLSchema="http:///org/eclipse/datatools/modelbase/sql/schema.ecore" xmlns:SQLTables="http:///org/eclipse/datatools/modelbase/sql/tables.ecore">
+  <SQLSchema:Database xmi:id="_HOJxkAMcEeiUSp42e6L_Sw" name="integration" vendor="MySql" version="4.0" schemas="_HONb8AMcEeiUSp42e6L_Sw">
+    <eAnnotations xmi:id="_HOJxkQMcEeiUSp42e6L_Sw" source="ConnectionURI">
+      <details xmi:id="_HOJxkgMcEeiUSp42e6L_Sw" key="ConnectionKey" value="integration"/>
+    </eAnnotations>
+  </SQLSchema:Database>
+  <SQLSchema:Schema xmi:id="_HONb8AMcEeiUSp42e6L_Sw" name="integration" indices="_HOODAAMcEeiUSp42e6L_Sw _HOODBgMcEeiUSp42e6L_Sw _HOOqFQMcEeiUSp42e6L_Sw" tables="_HOODAQMcEeiUSp42e6L_Sw _HOOqEAMcEeiUSp42e6L_Sw" database="_HOJxkAMcEeiUSp42e6L_Sw"/>
+  <SQLConstraints:Index xmi:id="_HOODAAMcEeiUSp42e6L_Sw" name="genre" Schema="_HONb8AMcEeiUSp42e6L_Sw" table="_HOODAQMcEeiUSp42e6L_Sw"/>
+  <SQLTables:PersistentTable xmi:id="_HOODAQMcEeiUSp42e6L_Sw" name="genres" schema="_HONb8AMcEeiUSp42e6L_Sw" index="_HOODAAMcEeiUSp42e6L_Sw">
+    <columns xmi:id="_HOODAgMcEeiUSp42e6L_Sw" name="movie_id" description="">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_HOODAwMcEeiUSp42e6L_Sw" name="INT" primitiveType="INTEGER"/>
+    </columns>
+    <columns xmi:id="_HOODBAMcEeiUSp42e6L_Sw" name="genre" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_HOODBQMcEeiUSp42e6L_Sw" name="TEXT" primitiveType="CHARACTER_LARGE_OBJECT"/>
+    </columns>
+  </SQLTables:PersistentTable>
+  <SQLConstraints:Index xmi:id="_HOODBgMcEeiUSp42e6L_Sw" name="movie_id" Schema="_HONb8AMcEeiUSp42e6L_Sw" unique="true" table="_HOOqEAMcEeiUSp42e6L_Sw">
+    <members xmi:id="_HOODBwMcEeiUSp42e6L_Sw" column="_HOOqEQMcEeiUSp42e6L_Sw"/>
+  </SQLConstraints:Index>
+  <SQLTables:PersistentTable xmi:id="_HOOqEAMcEeiUSp42e6L_Sw" name="movies" schema="_HONb8AMcEeiUSp42e6L_Sw" index="_HOODBgMcEeiUSp42e6L_Sw _HOOqFQMcEeiUSp42e6L_Sw">
+    <columns xmi:id="_HOOqEQMcEeiUSp42e6L_Sw" name="movie_id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_HOOqEgMcEeiUSp42e6L_Sw" name="INT" primitiveType="INTEGER"/>
+    </columns>
+    <columns xmi:id="_HOOqEwMcEeiUSp42e6L_Sw" name="title" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_HOOqFAMcEeiUSp42e6L_Sw" name="TEXT" primitiveType="CHARACTER_LARGE_OBJECT"/>
+    </columns>
+  </SQLTables:PersistentTable>
+  <SQLConstraints:Index xmi:id="_HOOqFQMcEeiUSp42e6L_Sw" name="title" Schema="_HONb8AMcEeiUSp42e6L_Sw" table="_HOOqEAMcEeiUSp42e6L_Sw"/>
+</xmi:XMI>

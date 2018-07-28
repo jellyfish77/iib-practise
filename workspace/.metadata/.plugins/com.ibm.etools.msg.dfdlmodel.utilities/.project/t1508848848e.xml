@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><MessageBroker name="IntegrationService_interface_and_maps">
+  <XSDCollection href="platform:/resource/IntegrationService_interface_and_maps/integration_movies/integration/integration/integration_movies.xsd" prefix="integrationintegration" targetNamespace="http://integration/integration">
+    <element href="platform:/resource/IntegrationService_interface_and_maps/integration_movies/integration/integration/integration_movies.xsd#//genres;XSDElementDeclaration" name="genres" type="mlib://IntegrationService_interface_and_maps#/-/complexType{http://integration/integration}genresType"/>
+    <element href="platform:/resource/IntegrationService_interface_and_maps/integration_movies/integration/integration/integration_movies.xsd#//movies;XSDElementDeclaration=1" name="movies" type="mlib://IntegrationService_interface_and_maps#/-/complexType{http://integration/integration}moviesType"/>
+    <complexType baseType="mlib://IntegrationService_interface_and_maps#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/IntegrationService_interface_and_maps/integration_movies/integration/integration/integration_movies.xsd#//genresType;XSDComplexTypeDefinition" name="genresType"/>
+    <complexType baseType="mlib://IntegrationService_interface_and_maps#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/IntegrationService_interface_and_maps/integration_movies/integration/integration/integration_movies.xsd#//moviesType;XSDComplexTypeDefinition=1" name="moviesType"/>
+  </XSDCollection>
+</MessageBroker>

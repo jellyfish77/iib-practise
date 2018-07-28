@@ -1,0 +1,19 @@
+
+
+Importing file: /home/otto/IBM/IIBT10/workspace/MySQL_Integration_DB/integration.dbm
+
+
+Processing schema integration.
+Creating complex type for table genres.
+Creating global element for table genres.
+Creating complex type for table movies.
+Creating global element for table movies.
+Creating file /IntegrationService_interface_and_maps/integration_movies/integration/integration/integration_movies.xsd in the workspace.
+
+Elapsed time processing this message definition file: 23.499 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

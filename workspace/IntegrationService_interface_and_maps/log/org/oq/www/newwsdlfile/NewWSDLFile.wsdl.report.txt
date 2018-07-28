@@ -1,0 +1,21 @@
+
+
+Importing file: /home/otto/IBM/IIBT10/workspace/IntegrationService_interface_and_maps/Integration Models/NewWSDLFile.wsdl
+
+The WSDL import will proceed with bindings NewWSDLFileSOAP.
+Creating wsdl schema document for file:///home/otto/IBM/IIBT10/workspace/IntegrationService_interface_and_maps/Integration Models/NewWSDLFile.wsdl.
+Parsing wsdl binding {http://www.oq.org/NewWSDLFile/}NewWSDLFileSOAP.
+Parsing wsdl binding input NewOperation.
+Parsing wsdl binding output NewOperation.
+Processing doc style for operation NewOperation.
+Populating WSDL schema Integration Models/NewWSDLFile.xsd.
+Creating file Integration Models/NewWSDLFile.xsd in the workspace.
+Copying source WSDL NewWSDLFile.wsdl to NewWSDLFile.wsdl.
+
+Elapsed time processing this message definition file: 0.076 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

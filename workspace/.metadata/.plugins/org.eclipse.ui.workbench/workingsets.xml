@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1514620188120_1" label="[Otto-Test-Application]" name="[Otto-Test-Application]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Otto-Test-ApplicationJava" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Otto-Test-Application" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1517029305645_4" label="[IntegrationService_interface_and_maps]" name="[IntegrationService_interface_and_maps]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/MySQL_Integration_DB" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/IntegrationService_interface_and_maps" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1514619915019_0" label="Window Working Set" name="Aggregate for window 1514619915019"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1516616849073_2" label="Window Working Set" name="Aggregate for window 1516616849073"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1516973084134_3" label="Window Working Set" name="Aggregate for window 1516973084134"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1517234907843_5" label="Window Working Set" name="Aggregate for window 1517234907843"/>
+</workingSetManager>

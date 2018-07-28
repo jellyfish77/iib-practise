@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><MRMessageSet id="G00TCG0002001" name="calculator_ms" parser="SOAP">
+  
+  
+  
+  
+
+  
+  
+  
+<MRMsgCollection href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd" prefix="soapenv" targetNamespace="http://schemas.xmlsoap.org/soap/envelope/">
+    <message href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/Envelope;XSDElementDeclaration$MRMessage" name="Envelope"/>
+    <message href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/Fault;XSDElementDeclaration=3$MRMessage" name="Fault"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/Envelope;XSDElementDeclaration" name="Envelope" type="mset://calculator_ms#/-/complexType{http://schemas.xmlsoap.org/soap/envelope/}Envelope"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/Header;XSDElementDeclaration=1" name="Header" type="mset://calculator_ms#/-/complexType{http://schemas.xmlsoap.org/soap/envelope/}Header"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/Body;XSDElementDeclaration=2" name="Body" type="mset://calculator_ms#/-/complexType{http://schemas.xmlsoap.org/soap/envelope/}Body"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/Fault;XSDElementDeclaration=3" name="Fault" type="mset://calculator_ms#/-/complexType{http://schemas.xmlsoap.org/soap/envelope/}Fault"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/Envelope;XSDComplexTypeDefinition" name="Envelope"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/Header;XSDComplexTypeDefinition=1" name="Header"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/Body;XSDComplexTypeDefinition=2" name="Body"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/Fault;XSDComplexTypeDefinition=3" name="Fault"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/detail;XSDComplexTypeDefinition=4" name="detail"/>
+    <attribute href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/mustUnderstand;XSDAttributeDeclaration" name="mustUnderstand"/>
+    <attribute href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/actor;XSDAttributeDeclaration=1" name="actor"/>
+    <attribute href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/encodingStyle;XSDAttributeDeclaration=2" name="encodingStyle"/>
+    <attributeGroup href="platform:/resource/calculator_msp/calculator_ms/org/xmlsoap/schemas/soap/envelope/soapenv11.mxsd#/0/encodingStyle;XSDAttributeGroupDefinition" name="encodingStyle"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/calculator_msp/calculator_ms/org/tempuri/calculatorms/calculator_msd_WSDLGenWrapper.mxsd" prefix="tns" targetNamespace="http://tempuri.org/calculator_ms">
+    <include name="calculator_ms/calculator_msd.mxsd" targetNamespace=""/>
+    <message href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ReqAdd;XSDElementDeclaration=5$MRMessage" name="ReqAdd"/>
+    <message href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ResAdd;XSDElementDeclaration=6$MRMessage" name="ResAdd"/>
+    <message href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ErrMessage;XSDElementDeclaration=7$MRMessage" name="ErrMessage"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/intA;XSDElementDeclaration" name="intA" type="mset://calculator_ms#/-/simpleType{http://www.w3.org/2001/XMLSchema}int"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/intB;XSDElementDeclaration=1" name="intB" type="mset://calculator_ms#/-/simpleType{http://www.w3.org/2001/XMLSchema}int"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/addC;XSDElementDeclaration=2" name="addC" type="mset://calculator_ms#/-/simpleType{http://www.w3.org/2001/XMLSchema}int"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/fcode;XSDElementDeclaration=3" name="fcode" type="mset://calculator_ms#/-/simpleType{http://www.w3.org/2001/XMLSchema}int"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/fmessage;XSDElementDeclaration=4" name="fmessage" type="mset://calculator_ms#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ReqAdd;XSDElementDeclaration=5" name="ReqAdd" type="mset://calculator_ms#/-/complexType{}ReqAdd"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ResAdd;XSDElementDeclaration=6" name="ResAdd" type="mset://calculator_ms#/-/complexType{}ResAdd"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ErrMessage;XSDElementDeclaration=7" name="ErrMessage" type="mset://calculator_ms#/-/complexType{}ErrMessage"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ReqAdd;XSDComplexTypeDefinition" name="ReqAdd"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ResAdd;XSDComplexTypeDefinition=1" name="ResAdd"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ErrMessage;XSDComplexTypeDefinition=2" name="ErrMessage"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd" prefix="" targetNamespace="">
+    <message href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ReqAdd;XSDElementDeclaration=5$MRMessage" name="ReqAdd"/>
+    <message href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ResAdd;XSDElementDeclaration=6$MRMessage" name="ResAdd"/>
+    <message href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ErrMessage;XSDElementDeclaration=7$MRMessage" name="ErrMessage"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/intA;XSDElementDeclaration" name="intA" type="mset://calculator_ms#/-/simpleType{http://www.w3.org/2001/XMLSchema}int"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/intB;XSDElementDeclaration=1" name="intB" type="mset://calculator_ms#/-/simpleType{http://www.w3.org/2001/XMLSchema}int"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/addC;XSDElementDeclaration=2" name="addC" type="mset://calculator_ms#/-/simpleType{http://www.w3.org/2001/XMLSchema}int"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/fcode;XSDElementDeclaration=3" name="fcode" type="mset://calculator_ms#/-/simpleType{http://www.w3.org/2001/XMLSchema}int"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/fmessage;XSDElementDeclaration=4" name="fmessage" type="mset://calculator_ms#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ReqAdd;XSDElementDeclaration=5" name="ReqAdd" type="mset://calculator_ms#/-/complexType{}ReqAdd"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ResAdd;XSDElementDeclaration=6" name="ResAdd" type="mset://calculator_ms#/-/complexType{}ResAdd"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ErrMessage;XSDElementDeclaration=7" name="ErrMessage" type="mset://calculator_ms#/-/complexType{}ErrMessage"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ReqAdd;XSDComplexTypeDefinition" name="ReqAdd"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ResAdd;XSDComplexTypeDefinition=1" name="ResAdd"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/calculator_msd.mxsd#/0/ErrMessage;XSDComplexTypeDefinition=2" name="ErrMessage"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/calculator_msp/calculator_ms/soap.mxsd" prefix="" targetNamespace="">
+    <message href="platform:/resource/calculator_msp/calculator_ms/soap.mxsd#/0/SOAP_Domain_Msg;XSDElementDeclaration$MRMessage" name="SOAP_Domain_Msg"/>
+    <element href="platform:/resource/calculator_msp/calculator_ms/soap.mxsd#/0/SOAP_Domain_Msg;XSDElementDeclaration" name="SOAP_Domain_Msg" type="mset://calculator_ms#/-/complexType{}SOAP_Msg_type"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/soap.mxsd#/0/MIME_Headers_type;XSDComplexTypeDefinition" name="MIME_Headers_type"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/soap.mxsd#/0/Attachment_type;XSDComplexTypeDefinition=1" name="Attachment_type"/>
+    <complexType baseType="mset://calculator_ms#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/calculator_msp/calculator_ms/soap.mxsd#/0/SOAP_Msg_type;XSDComplexTypeDefinition=2" name="SOAP_Msg_type"/>
+    <group href="platform:/resource/calculator_msp/calculator_ms/soap.mxsd#/0/MIME_header_fields;XSDModelGroupDefinition" name="MIME_header_fields"/>
+  </MRMsgCollection>
+</MRMessageSet>

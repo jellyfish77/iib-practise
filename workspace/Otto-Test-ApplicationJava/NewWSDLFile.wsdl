@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="NewWSDLFile" targetNamespace="http://www.oq.org/NewWSDLFile/" xmlns:oq="http://www.oq.org/NewWSDLFile/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="NewWSDLFileSOAP" originalBindingStyle="document"/>
+        <generatedXSD location="NewWSDLFile_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  <wsdl:types>
+    
+          <xsd:schema targetNamespace="http://www.oq.org/NewWSDLFile/" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+<xsd:include schemaLocation="NewWSDLFile_InlineSchema1.xsd"/>
+</xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="NewOperationRequest">
+    <wsdl:part element="oq:NewOperation" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="NewOperationResponse">
+    <wsdl:part element="oq:NewOperationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="NewWSDLFile">
+    <wsdl:operation name="NewOperation">
+      <wsdl:input message="oq:NewOperationRequest"/>
+      <wsdl:output message="oq:NewOperationResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NewWSDLFileSOAP" type="oq:NewWSDLFile">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="NewOperation">
+      <soap:operation soapAction="http://www.oq.org/NewWSDLFile/NewOperation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NewWSDLFile">
+    <wsdl:port binding="oq:NewWSDLFileSOAP" name="NewWSDLFileSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
