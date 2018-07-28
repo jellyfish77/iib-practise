@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1532766474539_1" label="[App_1_IIB_Message_Flow_using_MQ]" name="[App_1_IIB_Message_Flow_using_MQ]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/App_1_IIB_Message_Flow_using_MQ" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1532765458204_0" label="Window Working Set" name="Aggregate for window 1532765458204"/>
 </workingSetManager>

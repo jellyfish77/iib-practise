@@ -74,3 +74,18 @@ Command-line arguments:  -data /home/otto/IBM/IIBT10/tutorials -os linux -ws gtk
 
 !ENTRY com.ibm.mq.runtime 4 0 2018-07-28 16:10:58.212
 !MESSAGE WebSphere MQ install location is not found.
+
+!ENTRY org.eclipse.osgi 2 1 2018-07-28 16:27:56.143
+!MESSAGE NLS unused message: DFDLXSDResourceBuilder_errorSchemaInAppImportSchemaInSharedLib in: com.ibm.etools.msg.builder.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-07-28 16:27:56.144
+!MESSAGE NLS unused message: DFDLXSDResourceBuilder_errorProjectReferenceIsMissing in: com.ibm.etools.msg.builder.messages
+
+!ENTRY com.ibm.etools.mft.uri 0 0 2018-07-28 16:28:48.971
+!MESSAGE 
+
+!ENTRY org.eclipse.osgi 2 1 2018-07-28 16:28:49.217
+!MESSAGE NLS unused message: SendMessage_msgNameLabel in: com.ibm.etools.mft.testmode.TestModeStrings
+
+!ENTRY org.eclipse.osgi 2 1 2018-07-28 16:28:49.217
+!MESSAGE NLS missing message: SendLastMessageAction_label in: com.ibm.etools.mft.testmode.TestModeStrings
