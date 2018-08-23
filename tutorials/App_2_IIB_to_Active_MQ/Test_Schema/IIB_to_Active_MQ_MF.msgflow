@@ -31,7 +31,7 @@
       <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="425,417" mappingExpression="msl://{Test_Schema}#IIB_to_Active_MQ_MF_Mapping">
         <translation xmi:type="utility:ConstantString" string="Map_CDCatalog__to_AlbumCatalog"/>
       </nodes>
-      <nodes xmi:type="ComIbmXslMqsi.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="395,499" stylesheetName="Test_Schema/CDCatalog_to_AlbumCatalog.xsl" messageDomainProperty="XMLNS">
+      <nodes xmi:type="ComIbmXslMqsi.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="395,499" stylesheetName="Test_Schema/CDCatalog_to_AlbumCatalog.xsl" messageDomainProperty="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="XSL Transform_CDCatalog__to_AlbumCatalog"/>
       </nodes>
       <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="336,499" destination="file" filePath="/home/otto/log/trace_cd_catalog_input.log" pattern="${Root}">

@@ -6526,3 +6526,6 @@ java.lang.NullPointerException
 
 !ENTRY com.ibm.etools.mft.tutorials 4 0 2018-08-23 18:11:58.408
 !MESSAGE Connection error occurred : Can't connect to SOCKS proxy:Connection refused
+
+!ENTRY org.eclipse.osgi 2 1 2018-08-23 18:28:42.707
+!MESSAGE NLS missing message: confirmDeleteAllContent in: com.ibm.etools.mft.broker.repository.messages
