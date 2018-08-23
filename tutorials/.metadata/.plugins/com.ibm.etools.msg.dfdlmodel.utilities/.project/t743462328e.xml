@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><MessageBroker name="App_2_IIB_to_Active_MQ"/>
+<?xml version="1.0" encoding="UTF-8"?><MessageBroker name="App_2_IIB_to_Active_MQ">
+  <XSDCollection href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd" prefix="" targetNamespace="">
+    <element href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//COMPANY;XSDElementDeclaration" name="COMPANY" type="mlib://App_2_IIB_to_Active_MQ#/-/simpleType{}COMPANYType"/>
+    <element href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//PRICE;XSDElementDeclaration=1" name="PRICE" type="mlib://App_2_IIB_to_Active_MQ#/-/simpleType{}PRICEType"/>
+    <element href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//CATALOG;XSDElementDeclaration=2" name="CATALOG" type="mlib://App_2_IIB_to_Active_MQ#/-/complexType{}CATALOGType"/>
+    <element href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//COUNTRY;XSDElementDeclaration=3" name="COUNTRY" type="mlib://App_2_IIB_to_Active_MQ#/-/simpleType{}COUNTRYType"/>
+    <element href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//CD;XSDElementDeclaration=4" name="CD" type="mlib://App_2_IIB_to_Active_MQ#/-/complexType{}CDType"/>
+    <element href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//YEAR;XSDElementDeclaration=5" name="YEAR" type="mlib://App_2_IIB_to_Active_MQ#/-/simpleType{}YEARType"/>
+    <element href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//ARTIST;XSDElementDeclaration=6" name="ARTIST" type="mlib://App_2_IIB_to_Active_MQ#/-/simpleType{}ARTISTType"/>
+    <element href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//TITLE;XSDElementDeclaration=7" name="TITLE" type="mlib://App_2_IIB_to_Active_MQ#/-/simpleType{}TITLEType"/>
+    <complexType baseType="mlib://App_2_IIB_to_Active_MQ#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//CATALOGType;XSDComplexTypeDefinition" name="CATALOGType"/>
+    <complexType baseType="mlib://App_2_IIB_to_Active_MQ#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//CDType;XSDComplexTypeDefinition=1" name="CDType"/>
+    <simpleType href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//COMPANYType;XSDSimpleTypeDefinition" name="COMPANYType" variety="atomic"/>
+    <simpleType href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//PRICEType;XSDSimpleTypeDefinition=1" name="PRICEType" variety="atomic"/>
+    <simpleType href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//COUNTRYType;XSDSimpleTypeDefinition=2" name="COUNTRYType" variety="atomic"/>
+    <simpleType href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//YEARType;XSDSimpleTypeDefinition=3" name="YEARType" variety="atomic"/>
+    <simpleType href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//ARTISTType;XSDSimpleTypeDefinition=4" name="ARTISTType" variety="atomic"/>
+    <simpleType href="platform:/resource/App_2_IIB_to_Active_MQ/CDCatalog.xsd#//TITLEType;XSDSimpleTypeDefinition=5" name="TITLEType" variety="atomic"/>
+  </XSDCollection>
+</MessageBroker>
