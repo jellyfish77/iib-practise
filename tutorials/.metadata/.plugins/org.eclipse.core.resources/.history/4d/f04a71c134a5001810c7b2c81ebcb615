@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catalog>
+	<Record>
+		<Title>Empire Burlesque</Title>
+		<Artist>Bob Dylan</Artist>				
+		<Price>10.90</Price>
+		<Year>1985</Year>		
+		<Label>
+			<Name>Columbia</Name>
+			<Country>USA</Country>
+		</Label>
+	</CD>
+</Catalog>

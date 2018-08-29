@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="Test_Schema" version="8.0.5.0" xmlns:map="Test_Schema">
+    <input path="/CDCatalog.xsd"/>
+    <output path="/CDCatalog.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="IIB_to_Active_MQ_MF_Mapping">
+        <input path="mb:msg(CATALOG,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_CATALOG"/>
+        <output path="mb:msg(CATALOG,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_CATALOG1"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_CATALOG/Properties"/>
+            <output path="$ComIbmMessageAssembly_CATALOG1/Properties"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

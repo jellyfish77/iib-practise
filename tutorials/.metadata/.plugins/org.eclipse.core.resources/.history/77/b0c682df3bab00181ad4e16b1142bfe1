@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="Test_Schema" version="8.0.5.0" xmlns:map="Test_Schema">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/assembly/Environment.xsd" var="var"/>
+    <input path="/CDCatalog.xsd" var="var1"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/assembly/Environment.xsd" var="var2"/>
+    <output path="/Test_Schema/AlbumCatalog.xsd" var="var3"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="IIB_to_Active_MQ_MF_Mapping">
+        <input path="$var/mb:env(Environment)" var="Environment"/>
+        <input path="mb:msg(CATALOG,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_CATALOG"/>
+        <output path="$var2/mb:env(Environment)" var="Environment1"/>
+        <output path="$var3/mb:msg(Catalog,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_Catalog"/>
+        <passthrough>
+            <input path="$Environment/."/>
+            <output path="$Environment1/."/>
+            <updates>
+                <move>
+                    <input path="$Environment/Variables"/>
+                    <output path="$Environment1/Variables"/>
+                </move>
+            </updates>
+        </passthrough>
+        <move>
+            <input path="$ComIbmMessageAssembly_CATALOG/Properties" var="Properties"/>
+            <output path="$ComIbmMessageAssembly_Catalog/Properties"/>
+        </move>
+        <foreach>
+            <input path="$ComIbmMessageAssembly_CATALOG/CATALOG/CD" var="CD1"/>
+            <output path="$ComIbmMessageAssembly_Catalog/Catalog/Album"/>
+            <move>
+                <input path="$CD1/TITLE"/>
+                <output path="Title"/>
+            </move>
+            <move>
+                <input path="$CD1/ARTIST"/>
+                <output path="Artist"/>
+            </move>
+            <move>
+                <input path="$CD1/PRICE"/>
+                <output path="Price"/>
+            </move>
+            <move>
+                <input path="$CD1/YEAR"/>
+                <output path="Year"/>
+            </move>
+            <move>
+                <input path="$CD1/COMPANY"/>
+                <output path="Label/Name"/>
+            </move>
+            <move>
+                <input path="$CD1/COUNTRY"/>
+                <output path="Label/Country"/>
+            </move>
+            <assign value="Compact Disc">
+                <output path="Format"/>
+            </assign>
+        </foreach>
+    </mappingDeclaration>
+</mappingRoot>
