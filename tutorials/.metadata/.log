@@ -9107,3 +9107,85 @@ Binding(CTRL+SHIFT+X,
 
 !ENTRY org.eclipse.ui 4 4 2018-08-29 11:40:51.015
 !MESSAGE Conflicting handlers for com.ibm.msl.mapping.ui.QuickLinkToOutputCommand: {com.ibm.msl.mapping.internal.ui.editor.MappingEditor$10@9ea48e53} vs {com.ibm.msl.mapping.internal.ui.editor.MappingEditor$10@10802321}
+!SESSION 2018-09-01 13:33:44.884 -----------------------------------------------
+eclipse.buildId=4.2.2.M20140918-1444
+java.fullversion=JRE 1.7.0 IBM J9 2.7 Linux amd64-64 Compressed References 20160630_309914 (JIT enabled, AOT enabled)
+J9VM - R27_Java727_SR3_20160630_1516_B309914
+JIT  - tr.r13.java_20160629_120282
+GC   - R27_Java727_SR3_20160630_1516_B309914_CMPRSS
+J9CL - 20160630_309914
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_AU
+Framework arguments:  -showlocation -product com.ibm.etools.msgbroker.tooling.ide
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -showlocation -product com.ibm.etools.msgbroker.tooling.ide
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-09-01 13:33:51.122
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-09-01 13:33:54.120
+!MESSAGE Both 'com.ibm.etools.javaee.core' and 'com.ibm.etools.mft.service.model' register an extension parser for 'application'
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.482
+!MESSAGE System property http.proxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.482
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.482
+!MESSAGE System property https.proxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.482
+!MESSAGE System property https.proxyPort is not set but should be 443.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.483
+!MESSAGE System property socksProxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.483
+!MESSAGE System property socksProxyPort is not set but should be 1080.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.483
+!MESSAGE System property https.proxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.483
+!MESSAGE System property https.proxyPort is not set but should be 443.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.483
+!MESSAGE System property socksProxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.483
+!MESSAGE System property socksProxyPort is not set but should be 1080.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.483
+!MESSAGE System property socksProxyHost is not set but should be localhost.
+
+!ENTRY org.eclipse.core.net 1 0 2018-09-01 13:34:02.483
+!MESSAGE System property socksProxyPort is not set but should be 1080.
+
+!ENTRY org.eclipse.ui 2 2 2018-09-01 13:34:15.749
+!MESSAGE Invalid preference category path: com.ibm.importer.preferences (bundle: com.ibm.adapter.c, page: com.ibm.adapter.c.ui.preferencepage.CPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2018-09-01 13:34:15.753
+!MESSAGE Invalid preference category path: com.ibm.debug.breakpoints.common.pref.tracepoint (bundle: com.ibm.debug.wsa, page: com.ibm.debug.wsa.WSATracepointPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2018-09-01 13:34:15.753
+!MESSAGE Invalid preference category path: com.ibm.importer.preferences (bundle: com.ibm.etools.cobol.preference.ui, page: com.ibm.etools.cobol.preference.ui.preferencepage.CobolPreferencePage)
+
+!ENTRY com.ibm.etools.mft.uri 0 0 2018-09-01 13:34:17.587
+!MESSAGE 
+
+!ENTRY org.eclipse.osgi 2 1 2018-09-01 13:34:38.302
+!MESSAGE NLS missing message: overrideSavedTrustStorePasswordDialogTitle in: com.ibm.etools.mft.broker.runtime.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-09-01 13:34:38.302
+!MESSAGE NLS missing message: overrideSavedTrustStorePasswordDialogDescription in: com.ibm.etools.mft.broker.runtime.messages
+
+!ENTRY com.ibm.etools.mft.pattern.community 4 0 2018-09-01 13:34:40.358
+!MESSAGE Connection error occurred : Can't connect to SOCKS proxy:Connection refused
+
+!ENTRY com.ibm.mq.runtime 1 0 2018-09-01 13:34:40.669
+!MESSAGE /home/otto/iib-10.0.0.7/iib mqsifindmqpath
+
+!ENTRY com.ibm.mq.runtime 1 0 2018-09-01 13:34:40.731
+!MESSAGE BIP8100I: Unable to detect an installation of WebSphere MQ 
+
+!ENTRY com.ibm.mq.runtime 4 0 2018-09-01 13:34:40.732
+!MESSAGE WebSphere MQ install location is not found.

@@ -53,19 +53,20 @@ CREATE COMPUTE MODULE IIB_to_Active_MQ_MF_Compute
 		--RETURN FALSE;
 	END;
 
-	CREATE PROCEDURE CopyEntireMessage3() BEGIN
-		-- Declare local variable
+	CREATE PROCEDURE CopyEntireMessage3() BEGIN		
 		DECLARE sp1 NAMESPACE 'https://github.com/jellyfish77/iib-practise/tutorials';
 		DECLARE CurrentYear INTEGER 1990;
-		-- Loop through the input message
-		--SET OutputRoot.XMLNSC.Catalog[] =
-		--(SELECT I FROM InputRoot.XMLNSC.CATALOG[] AS I WHERE I.CD.YEAR <= CurrentYear);
 		
-		SET OutputRoot.XML.Catalog.Album[] = 
-			--(SELECT	C.TITLE, C.ARTIST, C.PRICE, C.YEAR FROM InputRoot.XMLNS.*.*[] AS C
-			--(SELECT	C.CD.TITLE, C.CD.ARTIST, C.CD.PRICE, C.CD.YEAR FROM InputRoot.XMLNS.CATALOG[] AS C
-			(SELECT	C.TITLE AS Title, C.ARTIST AS Artist, C.PRICE AS Price, C.YEAR as "Year" FROM InputRoot.XML.CATALOG.CD[] AS C
-			--(SELECT	C.CD.TITLE, C.CD.ARTIST, C.CD.PRICE, C.CD.YEAR FROM InputRoot.XMLNS.CATALOG.CD[] AS C
+		SET OutputRoot.XML.Catalog.Album[] =			
+			(SELECT	C.TITLE AS Title, 
+					C.ARTIST AS Artist, 
+					C.PRICE AS Price, 
+					C.YEAR as "Year", 
+					C.COMPANY AS Label.Name,
+					'String' AS Label.Name.(XML.Attribute)Type, 
+					C.COUNTRY AS Label.Country 
+					FROM InputRoot.XML.CATALOG.CD[] AS C
+					WHERE C.YEAR <=1990			
 			);
 	END;
 END MODULE;
