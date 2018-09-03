@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item value="Database" key="NewModelWizard_RESourceSelection"/>
-	<item value="MySql" key="NewModelWizard_SelectedDatabaseType"/>
-	<item value="4.0" key="NewModelWizard_SelectedDatabaseVersion"/>
-</section>

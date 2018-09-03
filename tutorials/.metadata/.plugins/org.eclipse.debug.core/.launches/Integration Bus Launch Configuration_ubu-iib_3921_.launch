@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="com.ibm.etools.mft.debug.internal.mbLaunchConfigurationDelegate">
-<stringAttribute key="BRName" value="TESTNODE_otto"/>
-<stringAttribute key="ConnectionInfo" value=""/>
-<stringAttribute key="EGName" value="tutorials"/>
-<stringAttribute key="com.ibm.etools.mft.debug.attr_hostname" value="ubu-iib"/>
-<stringAttribute key="com.ibm.etools.mft.debug.attr_javaportname" value="3921"/>
-</launchConfiguration>
