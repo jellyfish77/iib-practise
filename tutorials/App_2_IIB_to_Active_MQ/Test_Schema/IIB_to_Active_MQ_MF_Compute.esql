@@ -54,7 +54,7 @@ CREATE COMPUTE MODULE IIB_to_Active_MQ_MF_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage3() BEGIN		
-		DECLARE sp1 NAMESPACE 'https://github.com/jellyfish77/iib-practise/tutorials';
+		DECLARE sp1 NAMESPACE 'https://github.com/jellyfish77/iib-practise/tutorials'; 
 		DECLARE CurrentYear INTEGER 1990;
 		
 		SET OutputRoot.XML.Catalog.Album[] =			
@@ -64,7 +64,8 @@ CREATE COMPUTE MODULE IIB_to_Active_MQ_MF_Compute
 					C.YEAR as "Year", 
 					C.COMPANY AS Label.Name,
 					'String' AS Label.Name.(XML.Attribute)Type, 
-					C.COUNTRY AS Label.Country 
+					C.COUNTRY AS Label.Country,
+					C.COMPANY || ' ' || C.COUNTRY as Label.FullName
 					FROM InputRoot.XML.CATALOG.CD[] AS C
 					WHERE C.YEAR <=1990			
 			);
