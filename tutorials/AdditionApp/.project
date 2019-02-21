@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>App_2_IIB_to_Active_MQ</name>
+	<name>AdditionApp</name>
 	<comment></comment>
 	<projects>
-		<project>App_2_IIB_to_Active_MQJava</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

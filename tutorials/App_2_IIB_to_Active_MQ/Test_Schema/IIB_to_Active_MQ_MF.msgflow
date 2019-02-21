@@ -7,49 +7,49 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/App_2_IIB_to_Active_MQ/icons/full/obj16/IIB_to_Active_MQ_MF.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/App_2_IIB_to_Active_MQ/icons/full/obj30/IIB_to_Active_MQ_MF.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmJMSClientInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="124,61" sourceQueueName="dynamicQueues/TEST.IN.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" messageDomainProperty="BLOB" transactionMode="yes">
+      <nodes xmi:type="ComIbmJMSClientInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="10,25" sourceQueueName="dynamicQueues/TEST.IN.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" messageDomainProperty="BLOB" transactionMode="yes">
         <translation xmi:type="utility:ConstantString" string="JMS Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmJMSClientOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="423,66" destinationQueueName="dynamicQueues/TEST.OUT.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes">
+      <nodes xmi:type="ComIbmJMSClientOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="113,20" destinationQueueName="dynamicQueues/TEST.OUT.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes">
         <translation xmi:type="utility:ConstantString" string="JMS Output"/>
       </nodes>
-      <nodes xmi:type="ComIbmJMSClientInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="82,160" sourceQueueName="dynamicQueues/TEST.MapMessage.IN.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" messageDomainProperty="JMSMap" transactionMode="yes">
+      <nodes xmi:type="ComIbmJMSClientInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="10,120" sourceQueueName="dynamicQueues/TEST.MapMessage.IN.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" messageDomainProperty="JMSMap" transactionMode="yes">
         <translation xmi:type="utility:ConstantString" string="JMS MessageMap Input1"/>
       </nodes>
-      <nodes xmi:type="ComIbmJMSClientOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="514,159" destinationQueueName="dynamicQueues/TEST.MapMessage.OUT.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes" messageType="jms_map">
+      <nodes xmi:type="ComIbmJMSClientOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="280,115" destinationQueueName="dynamicQueues/TEST.MapMessage.OUT.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes" messageType="jms_map">
         <translation xmi:type="utility:ConstantString" string="JMS MessageMap Output1"/>
       </nodes>
-      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="279,161" destination="file" filePath="/home/otto/log/trace.log" pattern="${Root}">
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="206,115" destination="file" filePath="/home/otto/log/trace.log" pattern="${Root}">
         <translation xmi:type="utility:ConstantString" string="Trace"/>
       </nodes>
-      <nodes xmi:type="ComIbmJMSClientInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="85,388" sourceQueueName="dynamicQueues/IIB.cdCatalog.IN.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes">
+      <nodes xmi:type="ComIbmJMSClientInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="10,215" sourceQueueName="dynamicQueues/IIB.cdCatalog.IN.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes">
         <translation xmi:type="utility:ConstantString" string="JMS CD Catolog Input1"/>
       </nodes>
-      <nodes xmi:type="ComIbmJMSClientOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_8" location="671,407" destinationQueueName="dynamicQueues/IIB.cdCatalog.OUT.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes">
+      <nodes xmi:type="ComIbmJMSClientOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_8" location="689,315" destinationQueueName="dynamicQueues/IIB.cdCatalog.OUT.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes">
         <translation xmi:type="utility:ConstantString" string="JMS CD Catolog Output1"/>
       </nodes>
-      <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="350,288" mappingExpression="msl://{Test_Schema}#IIB_to_Active_MQ_MF_Mapping">
+      <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="309,420" mappingExpression="msl://{Test_Schema}#IIB_to_Active_MQ_MF_Mapping">
         <translation xmi:type="utility:ConstantString" string="Map_CDCatalog__to_AlbumCatalog"/>
       </nodes>
-      <nodes xmi:type="ComIbmXslMqsi.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="343,412" stylesheetName="Test_Schema/CDCatalog_to_AlbumCatalog.xsl" messageDomainProperty="XMLNSC">
+      <nodes xmi:type="ComIbmXslMqsi.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="278,210" stylesheetName="Test_Schema/CDCatalog_to_AlbumCatalog.xsl" messageDomainProperty="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="XSL Transform_CDCatalog__to_AlbumCatalog"/>
       </nodes>
-      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="270,387" destination="file" filePath="/home/otto/log/trace_cd_catalog_input.log" pattern="${Root}">
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="196,210" destination="file" filePath="/home/otto/log/trace_cd_catalog_input.log" pattern="${Root}">
         <translation xmi:type="utility:ConstantString" string="Trace1"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_12" location="453,520" computeExpression="esql://routine/Test_Schema#IIB_to_Active_MQ_MF_Compute.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_12" location="393,315" computeExpression="esql://routine/Test_Schema#IIB_to_Active_MQ_MF_Compute.Main">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
-      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_11" location="613,388" destination="file" filePath="/home/otto/log/trace_cd_catalog_ouput.log" pattern="${Root}">
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_11" location="607,315" destination="file" filePath="/home/otto/log/trace_cd_catalog_ouput.log" pattern="${Root}">
         <translation xmi:type="utility:ConstantString" string="Trace2"/>
       </nodes>
-      <nodes xmi:type="ComIbmJMSClientInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_13" location="101,689" sourceQueueName="dynamicQueues/IIB.Invoice.IN.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes">
+      <nodes xmi:type="ComIbmJMSClientInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_13" location="10,510" sourceQueueName="dynamicQueues/IIB.Invoice.IN.Q" jmsProviderName="activeMQ" initialContextFactory="" messageDomainProperty="BLOB" transactionMode="yes">
         <translation xmi:type="utility:ConstantString" string="JMS Invoice Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_14" location="304,688" destination="file" filePath="/home/otto/log/trace_invoice_input.log" pattern="${Root}&#xA;${Environment}&#xA;${LocalEnvironment}&#xA;${ExceptionList}">
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_14" location="162,515" destination="file" filePath="/home/otto/log/trace_invoice_input.log" pattern="---- ENVIRONMENT----&#xA;${Environment}&#xA;---- LOCAL ENVIRONMENT ----&#xA;${LocalEnvironment}&#xA;---- EXCEPTION LIST ----&#xA;${ExceptionList}&#xA;---- ROOT ----&#xA;${Root}">
         <translation xmi:type="utility:ConstantString" string="Trace3"/>
       </nodes>
-      <nodes xmi:type="ComIbmJMSClientOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_15" location="436,687" destinationQueueName="dynamicQueues/IIB.Invoice.OUT.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes">
+      <nodes xmi:type="ComIbmJMSClientOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_15" location="244,515" destinationQueueName="dynamicQueues/IIB.Invoice.OUT.Q" jmsProviderName="activeMQ" initialContextFactory="org.apache.activemq.jndi.ActiveMQInitialContextFactory" connectionFactoryName="ConnectionFactory" transactionMode="yes">
         <translation xmi:type="utility:ConstantString" string="JMS Invoice Output"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
