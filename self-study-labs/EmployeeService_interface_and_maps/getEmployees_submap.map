@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="false" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="/employeeNumber.xsd" var="var"/>
+    <input path="db:database(/HRDB.dbm,HRDB,db:schema-tables(HRDB,EMPLOYEE))" var="HRDB"/>
+    <output path="/hrdb/hrdb/HRDB.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://hrdb/hrdb"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="getEmployees_submap">
+        <input path="$var/type('employeeNumberType')" var="employeeNumberType"/>
+        <input path="$HRDB/db:select(fn:false(),ResultSet(HRDB/EMPLOYEE/EMPNO,HRDB/EMPLOYEE/FIRSTNME,HRDB/EMPLOYEE/MIDINIT,HRDB/EMPLOYEE/LASTNAME,HRDB/EMPLOYEE/WORKDEPT,HRDB/EMPLOYEE/PHONENO,HRDB/EMPLOYEE/HIREDATE,HRDB/EMPLOYEE/JOB,HRDB/EMPLOYEE/EDLEVEL,HRDB/EMPLOYEE/SEX,HRDB/EMPLOYEE/BIRTHDATE,HRDB/EMPLOYEE/SALARY,HRDB/EMPLOYEE/BONUS,HRDB/EMPLOYEE/COMM),db:where('HRDB.EMPLOYEE.EMPNO LIKE  ?','?'=fn:concat('%', $employeeNumberType, '%')))" var="dbselect"/>
+        <output namespace="http://hrdb/hrdb" path="type('EmployeeResponseType')"/>
+        <select ref="dbselect">
+            <input path="$dbselect/ResultSet"/>
+            <output path="."/>
+            <foreach>
+                <input path="."/>
+                <output path="EMPLOYEE"/>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/EMPNO"/>
+                    <output path="EMPNO"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/FIRSTNME"/>
+                    <output path="FIRSTNME"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/MIDINIT"/>
+                    <output path="MIDINIT"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/LASTNAME"/>
+                    <output path="LASTNAME"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/WORKDEPT"/>
+                    <output path="WORKDEPT"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/PHONENO"/>
+                    <output path="PHONENO"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/HIREDATE"/>
+                    <output path="HIREDATE"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/JOB"/>
+                    <output path="JOB"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/EDLEVEL"/>
+                    <output path="EDLEVEL"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/SEX"/>
+                    <output path="SEX"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/BIRTHDATE"/>
+                    <output path="BIRTHDATE"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/SALARY"/>
+                    <output path="SALARY"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/BONUS"/>
+                    <output path="BONUS"/>
+                </move>
+                <move automap="true">
+                    <input path="HRDB/EMPLOYEE/COMM"/>
+                    <output path="COMM"/>
+                </move>
+            </foreach>
+            <expression>
+                <input path="." var="ResultSet"/>
+                <output path="DBResp/RowsRetrieved"/>
+                <code lang="xpath">fn:count($ResultSet)</code>
+            </expression>
+            <assign value="0">
+                <output path="DBResp/UserReturnCode"/>
+            </assign>
+        </select>
+    </mappingDeclaration>
+</mappingRoot>

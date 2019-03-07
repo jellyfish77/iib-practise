@@ -1,0 +1,19 @@
+
+
+Importing file: /home/otto/IBM/IIBT10/self-study-labs/HRDB/HRDB.dbm
+
+
+Processing schema HRDB.
+Creating complex type for table DEPARTMENT.
+Creating global element for table DEPARTMENT.
+Creating complex type for table EMPLOYEE.
+Creating global element for table EMPLOYEE.
+Creating file /EmployeeService_interface_and_maps/hrdb/hrdb/HRDB.xsd in the workspace.
+
+Elapsed time processing this message definition file: 1085.751 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

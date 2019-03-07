@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessagePool xmlns="http://wwww.ibm.com/iib/test/1.0.0">
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeService_interface_and_maps/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="getEmployeeResponse" WSDL_OPERATION_NAME="getEmployee" WSDL_OPERATION_IN_NAME="getEmployeeRequest" timestamp="1552021098524" nodeId="FCMComposite_1_1" name="Employee 000010" id="1552021098524-6">
+        <plainText>%3C%3Fxml+version%3D%221.0%22+encoding%3D%22UTF-8%22%3F%3E%3Ctns0%3AEnvelope+xmlns%3Atns0%3D%22http%3A%2F%2Fschemas.xmlsoap.org%2Fsoap%2Fenvelope%2F%22+xmlns%3Atns1%3D%22http%3A%2F%2FEmployeeService%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22%3E%0A++%3Ctns0%3AHeader%2F%3E%0A++%3Ctns0%3ABody%3E%0A++++%3Ctns1%3AgetEmployee%3E%0A++++++%3CemployeeNumber%3E000010%3C%2FemployeeNumber%3E%0A++++%3C%2Ftns1%3AgetEmployee%3E%0A++%3C%2Ftns0%3ABody%3E%0A%3C%2Ftns0%3AEnvelope%3E</plainText>
+    </SOAPInputMessage>
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeService_interface_and_maps/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="getEmployeeResponse" WSDL_OPERATION_NAME="getEmployee" WSDL_OPERATION_IN_NAME="getEmployeeRequest" timestamp="1552025792737" nodeId="FCMComposite_1_1" name="Employee 000012" id="1552025792737-436">
+        <plainText>%3C%3Fxml+version%3D%221.0%22+encoding%3D%22UTF-8%22%3F%3E%3Ctns0%3AEnvelope+xmlns%3Atns0%3D%22http%3A%2F%2Fschemas.xmlsoap.org%2Fsoap%2Fenvelope%2F%22+xmlns%3Atns1%3D%22http%3A%2F%2FEmployeeService%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22%3E%0A++%3Ctns0%3AHeader%2F%3E%0A++%3Ctns0%3ABody%3E%0A++++%3Ctns1%3AgetEmployee%3E%0A++++++%3CemployeeNumber%3E000012%3C%2FemployeeNumber%3E%0A++++%3C%2Ftns1%3AgetEmployee%3E%0A++%3C%2Ftns0%3ABody%3E%0A%3C%2Ftns0%3AEnvelope%3E</plainText>
+    </SOAPInputMessage>
+</MessagePool>
