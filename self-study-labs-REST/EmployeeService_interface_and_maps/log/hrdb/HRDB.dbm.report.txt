@@ -1,0 +1,19 @@
+
+
+Importing file: C:\Users\iibuser\IBM\IIBT10\withToolkitFix\EmployeeService\HRDB\HRDB.dbm
+
+
+Processing schema IIBADMIN.
+Creating complex type for table DEPARTMENT.
+Creating global element for table DEPARTMENT.
+Creating complex type for table EMPLOYEE.
+Creating global element for table EMPLOYEE.
+Creating file \EmployeeService_interface_and_maps\hrdb\iibadmin\HRDB.xsd in the workspace.
+
+Elapsed time processing this message definition file: 3.193 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+
