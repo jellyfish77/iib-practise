@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="/EmployeeService_InlineSchema1.xsd"/>
+    <output path="/EmployeeService_InlineSchema1.xsd"/>
+    <imports>
+        <import kind="map" location="/getEmployees_submap.map" namespace="default"/>
+    </imports>
+    <namespaces>
+        <namespace kind="supplement" prefix="io2" uri="http://EmployeeService"/>
+        <namespace kind="supplement" prefix="io" uri="http://hrdb/hrdb"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="getEmployee_WS">
+        <input namespace="http://EmployeeService" path="mb:msg(getEmployee,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_getEmployee"/>
+        <output namespace="http://EmployeeService" path="mb:msg(getEmployeeResponse,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_getEmployeeResponse"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_getEmployee/Properties"/>
+            <output path="$ComIbmMessageAssembly_getEmployeeResponse/Properties"/>
+            <override>
+                <assign value="{EmployeeService_interface_and_maps}">
+                    <output path="$ComIbmMessageAssembly_getEmployeeResponse/Properties/MessageSet"/>
+                </assign>
+            </override>
+        </move>
+        <submap ref="map:getEmployees_submap">
+            <input path="$ComIbmMessageAssembly_getEmployee/getEmployee/employeeNumber"/>
+            <output path="$ComIbmMessageAssembly_getEmployeeResponse/getEmployeeResponse/EmployeeResponse"/>
+        </submap>
+    </mappingDeclaration>
+</mappingRoot>

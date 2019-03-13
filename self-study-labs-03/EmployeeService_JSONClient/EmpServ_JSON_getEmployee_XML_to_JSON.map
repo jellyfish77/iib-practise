@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="mbsharedlib://EmployeeService_interface_and_maps/EmployeeService_InlineSchema1.xsd"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="http://hrdb/hrdb"/>
+        <namespace kind="supplement" prefix="in" uri="http://EmployeeService"/>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="EmpServ_JSON_getEmployee_XML_to_JSON">
+        <input namespace="http://EmployeeService" path="mb:msg(getEmployeeResponse,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_getEmployeeResponse"/>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON">
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var"/>
+            <cast path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="{http://hrdb/hrdb}EmployeeResponse"/>
+        </output>
+        <move>
+            <input path="$ComIbmMessageAssembly_getEmployeeResponse/Properties"/>
+            <output path="$ComIbmMessageAssembly_JSON/Properties"/>
+            <override>
+                <assign value="application/json">
+                    <output path="$ComIbmMessageAssembly_JSON/Properties/ContentType"/>
+                </assign>
+            </override>
+        </move>
+        <local>
+            <input path="$ComIbmMessageAssembly_getEmployeeResponse/getEmployeeResponse"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/EmployeeResponse"/>
+            <move>
+                <input path="EmployeeResponse/DBResp"/>
+                <output path="DBResp"/>
+            </move>
+            <foreach>
+                <input path="EmployeeResponse/EMPLOYEE"/>
+                <output path="EMPLOYEE"/>
+                <move automap="true">
+                    <input path="EMPNO"/>
+                    <output path="EMPNO"/>
+                </move>
+                <move automap="true">
+                    <input path="FIRSTNME"/>
+                    <output path="FIRSTNME"/>
+                </move>
+                <move automap="true">
+                    <input path="MIDINIT"/>
+                    <output path="MIDINIT"/>
+                </move>
+                <move automap="true">
+                    <input path="LASTNAME"/>
+                    <output path="LASTNAME"/>
+                </move>
+                <move automap="true">
+                    <input path="WORKDEPT"/>
+                    <output path="WORKDEPT"/>
+                </move>
+                <move automap="true">
+                    <input path="PHONENO"/>
+                    <output path="PHONENO"/>
+                </move>
+                <move automap="true">
+                    <input path="HIREDATE"/>
+                    <output path="HIREDATE"/>
+                </move>
+                <move automap="true">
+                    <input path="JOB"/>
+                    <output path="JOB"/>
+                </move>
+                <move automap="true">
+                    <input path="EDLEVEL"/>
+                    <output path="EDLEVEL"/>
+                </move>
+                <move automap="true">
+                    <input path="SEX"/>
+                    <output path="SEX"/>
+                </move>
+                <move automap="true">
+                    <input path="BIRTHDATE"/>
+                    <output path="BIRTHDATE"/>
+                </move>
+                <move automap="true">
+                    <input path="SALARY"/>
+                    <output path="SALARY"/>
+                </move>
+                <move automap="true">
+                    <input path="BONUS"/>
+                    <output path="BONUS"/>
+                </move>
+                <move automap="true">
+                    <input path="COMM"/>
+                    <output path="COMM"/>
+                </move>
+            </foreach>
+        </local>
+    </mappingDeclaration>
+</mappingRoot>

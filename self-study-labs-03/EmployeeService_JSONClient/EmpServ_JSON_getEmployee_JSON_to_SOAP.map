@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <inlinedXMLSchema><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="empNumber" nillable="true" type="xsd:string"/>
+</xsd:schema>]]></inlinedXMLSchema>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var1"/>
+    <input path="mbsharedlib://EmployeeService_interface_and_maps/EmployeeService_InlineSchema1.xsd" var="var2"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/SOAPDomainMsg.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="EmpServ_JSON_getEmployee_JSON_to_SOAP">
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON">
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="empNumber" ref="var1"/>
+        </input>
+        <output path="mb:msg(SOAP_Domain_Msg,assembly,SOAP,Properties)" var="ComIbmMessageAssembly_SOAP_Domain_Msg">
+            <cast path="$ComIbmMessageAssembly_SOAP_Domain_Msg/SOAP_Domain_Msg/Body/any" qualifier="{http://EmployeeService}getEmployee" ref="var2"/>
+        </output>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/Properties"/>
+            <output path="$ComIbmMessageAssembly_SOAP_Domain_Msg/Properties"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/empNumber"/>
+            <output path="$ComIbmMessageAssembly_SOAP_Domain_Msg/SOAP_Domain_Msg/Body/getEmployee/employeeNumber"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>
