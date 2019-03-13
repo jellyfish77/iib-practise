@@ -3,4 +3,7 @@
     <InputMessage timestamp="1552451313455" nodeId="FCMComposite_1_1" name="Employee 000010" id="1552451313455-6">
         <plainText>%7B%22empNumber%22%3A%22000010%22%7D</plainText>
     </InputMessage>
+    <InputMessage timestamp="1552471787694" nodeId="FCMComposite_1_1" name="Employee 000012 (non existant)" id="1552471787694-33">
+        <plainText>%7B%22empNumber%22%3A%22000012%22%7D</plainText>
+    </InputMessage>
 </MessagePool>

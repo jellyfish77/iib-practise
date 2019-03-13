@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <inlinedXMLSchema><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="env_vars">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="empNumber" type="xsd:string"/>
+        <xsd:element name="rowsRetrieved" type="xsd:int"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>]]></inlinedXMLSchema>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/assembly/Environment.xsd" var="var2"/>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/BlobMessage.xsd" var="var3"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var1"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var4"/>
+    <input path="/empNotFound.xsd" var="var6"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/assembly/Environment.xsd" var="var5"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="EmpServ_JSON_getEmployee_EmployeeNotFound">
+        <input path="$var2/mb:env(Environment)" var="Environment">
+            <cast castType="userDefined" path="$Environment/Variables/any" qualifier="env_vars" ref="var1" var="any"/>
+        </input>
+        <input path="$var3/mb:msg(BLOB,assembly,BLOB,Properties)" var="ComIbmMessageAssembly_BLOB"/>
+        <output path="$var5/mb:env(Environment)" var="Environment1">
+            <cast castType="userDefined" path="$Environment1/any" qualifier="env_vars" ref="var1" var="any1"/>
+            <cast castType="userDefined" path="$Environment1/Variables/any" qualifier="env_vars" ref="var1" var="any2"/>
+        </output>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON">
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var" var="anyType"/>
+            <cast path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="{http://www.example.org/empNotFound}notfoundMessage" ref="var6" var="any3"/>
+        </output>
+        <passthrough>
+            <input path="$Environment/."/>
+            <output path="$Environment1/."/>
+            <updates/>
+        </passthrough>
+        <move>
+            <input path="$ComIbmMessageAssembly_BLOB/Properties"/>
+            <output path="$ComIbmMessageAssembly_JSON/Properties"/>
+        </move>
+        <assign value="Employee record has been requested but not found in database table">
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/notfoundMessage/text"/>
+        </assign>
+        <move>
+            <input path="$Environment/Variables/env_vars/empNumber"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/notfoundMessage/empNumber"/>
+        </move>
+        <expression>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/notfoundMessage/applicationName"/>
+            <code lang="xpath">iib:getApplicationName()</code>
+        </expression>
+        <expression>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/notfoundMessage/flowName"/>
+            <code lang="xpath">iib:getMessageFlowName()</code>
+        </expression>
+        <expression>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/notfoundMessage/dateTime"/>
+            <code lang="xpath">fn:current-dateTime()</code>
+        </expression>
+    </mappingDeclaration>
+</mappingRoot>
