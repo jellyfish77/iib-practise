@@ -4,7 +4,7 @@
 
 - [x] Producing and consuming Kafka messages [KafkaTutorial]
 - [x] Integration services (SOAP/HTTP inputs) [TemperatureConverter]
-- [ ] Transformation using a Map in a message flow
+- [x] Transformation using a Map in a message flow
 - [ ] Transformation using ESQL in a message flow
 - [ ] Transformation using Java in a message flow
 - [ ] Transformation using Java (JAXB) in a message flow
