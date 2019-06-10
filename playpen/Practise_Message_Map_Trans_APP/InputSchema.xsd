@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="PersonType">
+		<xsd:sequence>
+			<xsd:element name="FirstName" type="xsd:string">
+			</xsd:element>
+			<xsd:element name="LastName" type="xsd:string">
+				<xsd:unique name="NCName">
+					<xsd:selector xpath="token"></xsd:selector>
+					<xsd:field xpath="token"></xsd:field>
+				</xsd:unique>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="PersonID" type="xsd:integer"></xsd:attribute>
+	</xsd:complexType>
+	<xsd:element name="Persons">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element type="PersonType"
+					name="Person" minOccurs="1" maxOccurs="unbounded">
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
