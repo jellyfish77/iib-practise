@@ -9,7 +9,7 @@
 - [x] Transformation using Java in a message flow
 - [x] Transformation using Java (JAXB) in a message flow
 - [x] Transformation using XSL in a message flow
-- [ ] Transformation using .NET in a message flow
+- [x] Transformation using .NET in a message flow
 - [ ] Callable Flows
 - [ ] Business transaction monitoring
 - [ ] HTTP Input to drive a message flow
