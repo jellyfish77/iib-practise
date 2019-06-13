@@ -14,27 +14,39 @@ CREATE COMPUTE MODULE Movies_Esql_Transform_MF_Compute
 		--DECLARE films REFERENCE TO OutputRoot.XMLNSC.Films;
 		DECLARE film REFERENCE TO OutputRoot.XMLNSC.Films;
 		DECLARE ratings REFERENCE TO OutputRoot.XMLNSC.Films.Film;
+		DECLARE plot REFERENCE TO OutputRoot.XMLNSC.Films.Film;		
 				
-		-- for all the movies		
+		-- loop all movies om input message	
 		WHILE LASTMOVE(movie)=TRUE DO
 		
-			-- create the new message
+			-- create the new output message node
 			CREATE LASTCHILD OF OutputRoot.XMLNSC.Films AS film Type XMLNSC.Folder Name 'Film';
 			
+			-- add elements to output
 			SET film.(XMLNSC.Field)Name = movie.Title;
 			SET film.(XMLNSC.Field)ImdbId = movie.ImdbId;
 			SET film.(XMLNSC.Field)Lang = movie.Format.Language;
 						
-			DECLARE rating REFERENCE TO movie.Ratings.Rating;
-			WHILE LASTMOVE(rating) DO
-				-- create new Article
+			-- create reference to Rating node of input message
+			DECLARE rating REFERENCE TO movie.Ratings.Rating;			
+			-- loop all Rating elements on input message
+			WHILE LASTMOVE(rating) DO				
+				-- create new Rating node on output message
 				CREATE LASTCHILD OF film.Ratings AS ratings Type XMLNSC.Folder Name 'Rating';
+				-- set element values 
 				SET ratings.(XMLNSC.Field)Score = rating.Value;
+				SET ratings.(XMLNSC.Field)Website = rating.Source;
 				
 				MOVE rating NEXTSIBLING NAME 'Rating';
 			END WHILE;
 			
-			-- go to the next movie
+			DECLARE plotkeywords REFERENCE TO movie.Plot.PlotKeywords;
+			WHILE LASTMOVE(plotkeywords) DO						
+				CREATE LASTCHILD OF film.Plot AS plot Type XMLNSC.Folder Name 'Keywords';			
+				set plot.(XMLNSC.Field)Keywords = plot.PlotKeyword;				
+				MOVE plotkeywords NEXTSIBLING NAME 'PlotKeywords';
+			END WHILE;
+						
 			MOVE movie NEXTSIBLING NAME 'Movie';
 		
 		END WHILE;
